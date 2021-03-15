@@ -3,16 +3,16 @@ const db = new trainingDAO();
 
 exports.landing_page = function (req, res)
 {
-    res.send('Hello! Welcome to  my app from controller');
+    res.send('My Training Page');
     db.init();
 }
 
 exports.trainingLog_page = function (req, res)
 {
-  db.getAllEntries().then((list) => {        
+  db.getAllLogs().then((list) => {        
      res.render('entries', {
         'title': 'Guest Book', 
-        'entries': list        
+        'logs': list        
        });         
        
        console.log('promise resolved'); 
