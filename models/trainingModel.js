@@ -52,7 +52,7 @@ class Training
               console.log('get all logs promise rejected:', err);
           }
           else{
-              resolve(entries);
+              resolve(logs);
               console.log('function all() returns: ', logs);
           }
         })
