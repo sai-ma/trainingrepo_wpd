@@ -10,8 +10,8 @@ exports.landing_page = function (req, res)
 exports.trainingLog_page = function (req, res)
 {
   db.getAllLogs().then((list) => {        
-     res.render('entries', {
-        'title': 'Guest Book', 
+     res.render('logs', {
+        'title': 'Training Logs', 
         'logs': list        
        });         
        
