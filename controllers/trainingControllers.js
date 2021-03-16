@@ -1,9 +1,10 @@
 const trainingDAO = require('../models/trainingModel');
-const db = new trainingDAO();
+const db = new trainingDAO('training.db');
 
 exports.landing_page = function (req, res)
 {
-    res.send('My Training Page');
+  res.redirect('./homepage.html');
+
     db.init();
 }
 
@@ -11,7 +12,7 @@ exports.trainingGoals_page = function (req, res)
 {
   db.getAllGoals().then((list) => {        
      res.render('goals', {
-        'title': 'Training Logs', 
+        'title': 'Training Goals', 
         'goals': list        
        });         
        
