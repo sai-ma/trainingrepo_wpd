@@ -40,20 +40,20 @@ class Training
         console.log('db entry lunges inserted');
     }
 
-    getAllLogs()
+    getAllGoals()
     {
         return new Promise((resolve, reject) => {
 
-        this.db.find({}, function (err, logs) {
+        this.db.find({}, function (err, goals) {
         
           if (err)
           {
               reject(err);
-              console.log('get all logs promise rejected:', err);
+              console.log('get all goals promise rejected:', err);
           }
           else{
-              resolve(logs);
-              console.log('function all() returns: ', logs);
+              resolve(goals);
+              console.log('function all() returns: ', goals);
           }
         })
     })

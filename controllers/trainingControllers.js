@@ -7,12 +7,12 @@ exports.landing_page = function (req, res)
     db.init();
 }
 
-exports.trainingLog_page = function (req, res)
+exports.trainingGoals_page = function (req, res)
 {
-  db.getAllLogs().then((list) => {        
-     res.render('logs', {
+  db.getAllGoals().then((list) => {        
+     res.render('goals', {
         'title': 'Training Logs', 
-        'logs': list        
+        'goals': list        
        });         
        
        console.log('promise resolved'); 
