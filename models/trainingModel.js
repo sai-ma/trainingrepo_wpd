@@ -25,7 +25,7 @@ class Training
     init() {
         this.db.insert({
             trainingGoal: '3 sets of 10 reps - squats',
-            startDate: Date.now(), 
+            startDate: '08/03/2021', 
             achieved: 'Yes'
         }); 
         console.log('db entry squats inserted'); 
@@ -33,7 +33,7 @@ class Training
 
         this.db.insert({ 
             trainingGoal: '1 set of 10 reps - lunges',
-            startDate: Date.now(), 
+            startDate: '15/03/2021', 
             achieved: 'No'
         });
     
