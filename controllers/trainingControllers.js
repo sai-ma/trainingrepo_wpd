@@ -34,7 +34,7 @@ exports.about_page = function(req, res)
 
 exports.new_entry = function(req, res) 
 {    
-     res.send('<h1>Not yet implemented: show a new entry page.</h1>'); 
+     res.render('newEntry', {'title': 'Training'})
 }
 
 exports.not_found = function(req, res) 

@@ -11,7 +11,7 @@ class Training
         { 
             this.db = new nedb({ filename: dbFilePath, autoload: true });
             console.log('DB connected to ' + dbFilePath);
-            //embedded mode not set?
+            //embedded mode
         }
         else 
         {
