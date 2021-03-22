@@ -26,6 +26,6 @@
 // homepage: /
 // about: /about
 // goals: /mygoals
-// add new goal: /newEntry (this is not implemented yet, form not implemented)
+// add new goal: /new  (this is not implemented yet, form not implemented)
 // 404 response: for any other URLs not listed
 

@@ -24,6 +24,7 @@ class Training
     ////a function to seed the database
     init() {
         this.db.insert({
+            author: 'Bob',
             trainingGoal: '3 sets of 10 reps - squats',
             startDate: '08/03/2021', 
             achieved: 'Yes'
@@ -32,9 +33,10 @@ class Training
 
 
         this.db.insert({ 
+            author: 'Bobby',
             trainingGoal: '1 set of 10 reps - lunges',
             startDate: '15/03/2021', 
-            achieved: 'No'
+            achieved: 'Yes'
         });
     
         console.log('db entry lunges inserted');
