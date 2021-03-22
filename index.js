@@ -8,7 +8,7 @@ const mustache = require('mustache-express');
 
 //use express to create a web application
 const app = express();
-const public = path.join(__dirname, 'public');
+const public = path.join(__dirname, 'views');
 //instruct express to use folder 'public' for static resources
 app.use(express.static(public));
 
