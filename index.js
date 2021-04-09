@@ -2,20 +2,26 @@ const express = require('express');
 const path = require('path');
 const router = require('./routes/trainingRoutes')
 const mustache = require('mustache-express');
+const bodyParser = require('body-parser');
 
 
 
 
 //use express to create a web application
 const app = express();
-const public = path.join(__dirname, 'views');
-//instruct express to use folder 'public' for static resources
-app.use(express.static(public));
-
+const views = path.join(__dirname, 'views');
 
 //mustache
 app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
+app.use(express.static(views));
+
+//body parser
+app.use(bodyParser.urlencoded({extended:false}));
+
+
+
+
 
 //only one line needed on index to reroute all routes apparently
 app.use('/',router);

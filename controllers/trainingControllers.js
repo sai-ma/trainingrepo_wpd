@@ -37,6 +37,11 @@ exports.new_entry = function(req, res)
      res.render('newEntry', {'title': 'Training'})
 }
 
+exports.post_new_entry = function (req, res)
+{
+  console.log()
+}
+
 exports.not_found = function(req, res) 
 {
      res.status(404);
