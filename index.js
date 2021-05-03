@@ -2,9 +2,8 @@ const express = require('express');
 const path = require('path');
 const router = require('./routes/trainingRoutes')
 const mustache = require('mustache-express');
-const bodyParser = require('body-parser');
-
-
+//const bodyParser = require('body-parser');
+//body-parser not needed
 
 
 //use express to create a web application
@@ -16,8 +15,10 @@ app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
 app.use(express.static(views));
 
-//body parser
-app.use(bodyParser.urlencoded({extended:false}));
+//body parser is not needed as it created a depreciated flag
+//app.use(bodyParser.urlencoded({extended:false}));
+//express has its own body-parser vv
+app.use(express.urlencoded({ extended: false }));
 
 
 
