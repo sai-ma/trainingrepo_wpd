@@ -3,7 +3,7 @@ const db = new trainingDAO('training.db');
 
 exports.landing_page = function (req, res)
 {
-  res.redirect('./homepage');
+  res.redirect('./homepage.html');
 
     db.init();
 }
