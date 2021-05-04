@@ -22,10 +22,12 @@ class Training
     }
 
     ////a function to seed the database
+    ////don't really need anymore once CRUD functions are completed?
     init() {
         this.db.insert({
             author: 'Bob',
-            trainingGoal: '3 sets of 10 reps - squats',
+            targetArea: 'Upper Body',
+            trainingGoal: 'bicep curls 2 sets 2 days',
             startDate: '08/03/2021', 
             achieved: 'Y'
         }); 
@@ -34,13 +36,17 @@ class Training
 
         this.db.insert({ 
             author: 'Bobby',
-            trainingGoal: '1 set of 10 reps - lunges',
+            targetArea: 'Legs',
+            trainingGoal: 'squats 2 sets 10 reps',
             startDate: '15/03/2021', 
             achieved: 'N'
         });
     
         console.log('db entry lunges inserted');
     }
+
+
+
 
     //get all goals for mygoals page
 
@@ -72,7 +78,7 @@ class Training
                 reject(err);
             } else {
                 resolve(goals);
-                console.log('function getEntriesByUser() returns: ', goals);
+                console.log('function getGoalsByUser() returns: ', goals);
             }
         })
     })
@@ -80,9 +86,10 @@ class Training
 
 
 //add goal
-addEntry(author, trainingGoal, achieved) {
+addEntry(author, targetArea, trainingGoal, achieved) {
     var entry = {
         author: author,
+        targetArea: targetArea,
         trainingGoal: trainingGoal,
         startDate: new Date().toISOString().split('T')[0],
         achieved: achieved
@@ -91,7 +98,7 @@ addEntry(author, trainingGoal, achieved) {
 
     this.db.insert(entry, function(err, doc) {
         if (err) {
-            console.log('Error inserting document', trainingGoal);
+            console.log('Error inserting document', targetArea);
         } else {
             console.log('document inserted into the database', doc);
         }
