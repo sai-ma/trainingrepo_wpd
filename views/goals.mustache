@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
    {{>header}}
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 </head>
 <body class="container">
 <h1>Training Me</h1>
@@ -24,6 +25,9 @@
         </div>
         <div class="card-text">
         Achieved? {{achieved}}
+        </div>
+        <a href='/delete/{{_id}}' alt='delete this goal'><i class='fa fa-trash' style='font-size:24px'></i></a>
+        <div>
         </div>
       </div>
     </div>

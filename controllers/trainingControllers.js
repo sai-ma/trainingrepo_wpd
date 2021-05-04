@@ -3,7 +3,7 @@ const db = new trainingDAO('training.db');
 
 exports.landing_page = function (req, res)
 {
-  res.redirect('./homepage.html');
+  res.redirect('./homepage');
 
     db.init();
 }
@@ -63,6 +63,24 @@ exports.post_new_entry = function(req, res) {
   db.addEntry(req.body.author, req.body.trainingGoal, req.body.achieved);
   res.redirect('/mygoals');
 }
+
+
+//delete goal
+exports.delete_goal = function (req,res)
+{
+  console.log('id in delete_goal', req.params.id);
+  //res.send('<h1>Delete goal called</h1>' );
+
+  db.deleteGoal(req.params.id);
+  res.redirect('/mygoals');
+}
+
+
+
+
+
+
+
 
 exports.not_found = function(req, res) 
 {

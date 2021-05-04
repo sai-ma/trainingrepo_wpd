@@ -20,6 +20,7 @@ router.get('/new', controller.new_entry);
 //add new goal entry POST
 router.post('/new', controller.post_new_entry);
 
+router.get('/delete/:id', controller.delete_goal);
 
 
 router.use(controller.not_found);

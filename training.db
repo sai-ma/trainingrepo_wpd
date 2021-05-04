@@ -1,11 +1,21 @@
-{"author":"Bobby","trainingGoal":"1 set of 10 reps - lunges","startDate":"15/03/2021","achieved":"N","_id":"2pBDvVdB4y07DzUZ"}
 {"author":"Bob Ross","trainingGoal":"running - 30 minutes 3 days","startDate":"2021-05-04","achieved":"N","_id":"OC3IRIjXopQAwuMC"}
 {"author":"Bobby","trainingGoal":"1 set of 10 reps - lunges","startDate":"15/03/2021","achieved":"N","_id":"Ok9VMYNNazkCLyoh"}
-{"author":"vlad","trainingGoal":"cardio - 20 mins","startDate":"2021-05-04","achieved":"N","_id":"ZqlSPM5AyVtbZH2C"}
+{"author":"Bobby","targetArea":"Legs","trainingGoal":"squats 2 sets 10 reps","startDate":"15/03/2021","achieved":"N","_id":"QSL7H9nN518yOmqp"}
+{"author":"Bobby","trainingGoal":"1 set of 10 reps - lunges","startDate":"15/03/2021","achieved":"N","_id":"XQONjfhFbMUSD81z"}
+{"author":"Bob","targetArea":"Upper Body","trainingGoal":"bicep curls 2 sets 2 days","startDate":"08/03/2021","achieved":"Y","_id":"bNypWRPV8ooMUjSk"}
 {"author":"Bobby","trainingGoal":"1 set of 10 reps - lunges","startDate":"15/03/2021","achieved":"N","_id":"f1L08Q6oQ0k5Mr1n"}
 {"author":"Bob","trainingGoal":"3 sets of 10 reps - squats","startDate":"08/03/2021","achieved":"Y","_id":"nI2pIuwXpB71spov"}
 {"author":"Bob","trainingGoal":"3 sets of 10 reps - squats","startDate":"08/03/2021","achieved":"Y","_id":"oCC792oX0c5miu0z"}
+{"author":"Bobby","targetArea":"Legs","trainingGoal":"squats 2 sets 10 reps","startDate":"15/03/2021","achieved":"N","_id":"oZa7c9mVN5FQhDqa"}
 {"author":"Bob","trainingGoal":"3 sets of 10 reps - squats","startDate":"08/03/2021","achieved":"Y","_id":"wDntOLSSYOvTxbyw"}
-{"author":"Alien","trainingGoal":"hunting - 20 mins 3 days","startDate":"2021-05-04","achieved":"N","_id":"D2W3H3bQ6IzrShnX"}
 {"author":"Bob","trainingGoal":"3 sets of 10 reps - squats","startDate":"08/03/2021","achieved":"Y","_id":"z4UIsXyhbxCfWh0j"}
-{"author":"Bobby","trainingGoal":"1 set of 10 reps - lunges","startDate":"15/03/2021","achieved":"N","_id":"XQONjfhFbMUSD81z"}
+{"$$deleted":true,"_id":"OC3IRIjXopQAwuMC"}
+{"$$deleted":true,"_id":"Ok9VMYNNazkCLyoh"}
+{"$$deleted":true,"_id":"QSL7H9nN518yOmqp"}
+{"$$deleted":true,"_id":"XQONjfhFbMUSD81z"}
+{"$$deleted":true,"_id":"bNypWRPV8ooMUjSk"}
+{"$$deleted":true,"_id":"f1L08Q6oQ0k5Mr1n"}
+{"$$deleted":true,"_id":"nI2pIuwXpB71spov"}
+{"$$deleted":true,"_id":"oCC792oX0c5miu0z"}
+{"$$deleted":true,"_id":"oZa7c9mVN5FQhDqa"}
+{"$$deleted":true,"_id":"wDntOLSSYOvTxbyw"}

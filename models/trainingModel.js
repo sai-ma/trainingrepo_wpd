@@ -86,7 +86,8 @@ class Training
 
 
 //add goal
-addEntry(author, targetArea, trainingGoal, achieved) {
+addEntry(author, targetArea, trainingGoal, achieved) 
+{
     var entry = {
         author: author,
         targetArea: targetArea,
@@ -104,6 +105,21 @@ addEntry(author, targetArea, trainingGoal, achieved) {
         }
     })
 
+}
+
+deleteGoal(id)
+{
+    this.db.remove({_id: id}, {}, function(err, rem)
+    {
+        if (err)
+        {
+            console.log('error in deleteGoal', err);
+        }
+        else
+        {
+            console.log(rem, 'goal deleted');
+        }
+    })
 }
 
 
