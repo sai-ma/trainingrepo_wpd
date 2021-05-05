@@ -89,6 +89,18 @@ exports.delete_goal = function (req,res)
 }
 
 
+
+//function to show register page
+exports.show_register_page = function(req,res)
+{
+  res.render("user/register");
+}
+
+
+
+
+
+
 ////for urls not accounted for
 exports.not_found = function(req, res) 
 {
