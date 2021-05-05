@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', controller.landing_page ); 
 
 
-router.get('/mygoals', controller.trainingGoals_page);
+router.get('/goals', controller.trainingGoals_page);
 
 //for static files, have to 'redirect' and add file path...?
 router.get('/about', controller.about_page);
@@ -15,10 +15,10 @@ router.get('/about', controller.about_page);
 router.get('/posts/:author', controller.show_user_goals);
 
 //add new goal entry GET
-router.get('/new', controller.new_entry); 
+router.get('/new', controller.new_goal); 
 
 //add new goal entry POST
-router.post('/new', controller.post_new_entry);
+router.post('/new', controller.post_new_goal);
 
 router.get('/delete/:id', controller.delete_goal);
 

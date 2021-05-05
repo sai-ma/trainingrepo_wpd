@@ -1,6 +1,8 @@
 const trainingDAO = require('../models/trainingModel');
 const db = new trainingDAO('training.db');
 
+
+////function for when users access / url
 exports.landing_page = function (req, res)
 {
   res.redirect('./homepage.html');
@@ -8,6 +10,7 @@ exports.landing_page = function (req, res)
     db.init();
 }
 
+////function for when users access /goals url
 exports.trainingGoals_page = function (req, res)
 {
   db.getAllGoals().then((list) => {        
@@ -23,15 +26,16 @@ exports.trainingGoals_page = function (req, res)
          })
 
 
-}//end of end point?
+}
 
 
-
+////function for when users access /about.html url
 exports.about_page = function(req, res) 
 {
     res.redirect('./about.html');
 }
 
+////function for when users click author name hyperlink
 exports.show_user_goals = function(req,res)
 {
     console.log('filtering author name', req.params.author);
@@ -47,13 +51,15 @@ exports.show_user_goals = function(req,res)
     });
 }
 
-exports.new_entry = function(req, res) 
+////function for when user accesses add new goal page /new url
+exports.new_goal = function(req, res) 
 {    
-     res.render('newEntry', {'title': 'Training'})
+     res.render('newGoal', {'title': 'Training'})
 }
 
-exports.post_new_entry = function(req, res) {
-  console.log('processing post-new_entry controller');
+////function for after submitting to add new goal
+exports.post_new_goal = function(req, res) {
+  console.log('processing post-new_goal controller');
 
   if (!req.body.author) {
       response.status(400).send("Goal entries must have an author.");
@@ -61,27 +67,22 @@ exports.post_new_entry = function(req, res) {
   }
 
   db.addEntry(req.body.author, req.body.trainingGoal, req.body.achieved);
-  res.redirect('/mygoals');
+  res.redirect('/goals');
 }
 
 
-//delete goal
+////delete goal
 exports.delete_goal = function (req,res)
 {
   console.log('id in delete_goal', req.params.id);
   //res.send('<h1>Delete goal called</h1>' );
 
   db.deleteGoal(req.params.id);
-  res.redirect('/mygoals');
+  res.redirect('/goals');
 }
 
 
-
-
-
-
-
-
+////for urls not accounted for
 exports.not_found = function(req, res) 
 {
      res.status(404);
