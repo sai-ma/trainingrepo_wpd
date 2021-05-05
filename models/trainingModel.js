@@ -88,16 +88,17 @@ class Training
 //add goal
 addEntry(author, targetArea, trainingGoal, achieved) 
 {
-    var entry = {
+    var goal = {
         author: author,
         targetArea: targetArea,
-        trainingGoal: trainingGoal,
-        startDate: new Date().toISOString().split('T')[0],
-        achieved: achieved
+        trainingGoal:trainingGoal,
+        achieved:achieved,
+        startDate: new Date().toISOString().split('T')[0]
+        
     }
-    console.log('entry created', entry);
+    console.log('entry created', goal);
 
-    this.db.insert(entry, function(err, doc) {
+    this.db.insert(goal, function(err, doc) {
         if (err) {
             console.log('Error inserting document', targetArea);
         } else {

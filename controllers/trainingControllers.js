@@ -57,18 +57,25 @@ exports.new_goal = function(req, res)
      res.render('newGoal', {'title': 'Training'})
 }
 
+
+
+
 ////function for after submitting to add new goal
 exports.post_new_goal = function(req, res) {
   console.log('processing post-new_goal controller');
 
-  if (!req.body.author) {
+  if (!req.body.author) 
+  {
       response.status(400).send("Goal entries must have an author.");
       return;
   }
 
-  db.addEntry(req.body.author, req.body.trainingGoal, req.body.achieved);
+  db.addEntry(req.body.author, req.body.targetArea, req.body.trainingGoal, req.body.achieved);
   res.redirect('/goals');
 }
+
+
+
 
 
 ////delete goal
