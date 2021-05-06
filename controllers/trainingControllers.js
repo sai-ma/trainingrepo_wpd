@@ -9,7 +9,7 @@ exports.landing_page = function (req, res)
 {
   res.redirect('./homepage.html');
 
-    db.init();
+    //db.init();
 }
 
 ////function for when users access /goals url
