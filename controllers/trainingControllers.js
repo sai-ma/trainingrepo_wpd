@@ -18,6 +18,7 @@ exports.trainingGoals_page = function (req, res)
   db.getAllGoals().then((list) => {        
      res.render('goals', {
         'title': 'Training Goals', 
+        'user': req.user,
         'goals': list        
        });         
        
