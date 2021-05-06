@@ -1,4 +1,5 @@
 const trainingDAO = require('../models/trainingModel');
+const userDAO = require('../models/userModel.js');
 const db = new trainingDAO('training.db');
 
 
@@ -97,7 +98,35 @@ exports.show_register_page = function(req,res)
 }
 
 
+exports.post_new_user = function(req,res)
+{
+  const user = req.body.username;
+  const password = req.body.pass;
 
+  if(!user || !password)
+  {
+    res.send(401, 'no user or no password');
+    return;
+  }
+  userDAO.lookup(user, function(err, u)
+  {
+  if(u) 
+  {
+    res.send(401, "User exists", user);
+    return;
+  }
+  userDAO.create(user, password);
+  res.redirect('/login');
+});
+
+
+};
+
+
+exports.show_login_page = function(req,res)
+{
+  res.render("user/login");
+};
 
 
 

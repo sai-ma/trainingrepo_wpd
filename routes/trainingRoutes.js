@@ -26,6 +26,10 @@ router.get('/delete/:id', controller.delete_goal);
 router.get('/register', controller.show_register_page);
 
 
+router.post('/register', controller.post_new_user);
+
+router.get('/login', controller.show_login_page);
+
 router.use(controller.not_found);
 
 module.exports = router;
