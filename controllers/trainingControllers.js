@@ -1,3 +1,4 @@
+const { response } = require('express');
 const trainingDAO = require('../models/trainingModel');
 const userDAO = require('../models/userModel.js');
 const db = new trainingDAO('training.db');
@@ -45,17 +46,20 @@ exports.show_user_goals = function(req,res)
     db.getGoalsByUser(user).then((goals) => {
         res.render('goals', {
             'title': 'Training Me',
+            'user': req.user,
             'goals': goals
         });
-    }).catch((err) => {
-        console.log('error handling author posts', err);
+    })
+    .catch((err) => {
+        console.log('error handling author posts: ')
+        console.log(JSON.stringify(err))
     });
 }
 
 ////function for when user accesses add new goal page /new url
 exports.new_goal = function(req, res) 
 {    
-     res.render('newGoal', {'title': 'Training'})
+     res.render('newGoal', {'title': 'Training', 'user': req.user})
 }
 
 
@@ -128,6 +132,17 @@ exports.show_login_page = function(req,res)
   res.render("user/login");
 };
 
+exports.post_login = function(req, res)
+{
+  console.log('serializeUser wrote', req.session.passport.user);
+  res.redirect('/goals');
+}
+
+exports.logout = function(req,res)
+{
+  req.logout();
+  res.redirect('/goals');
+};
 
 
 ////for urls not accounted for

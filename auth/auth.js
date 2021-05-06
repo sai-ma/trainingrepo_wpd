@@ -48,6 +48,10 @@ exports.init = function(app)
        });
    });
 
+   app.use(passport.session());
+   app.use(passport.initialize());
+
+
 };
 
 exports.authorize = function(redirect)

@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
    {{>header}}
@@ -9,6 +9,7 @@
     <h2>{{title}}</h2>
     
     <div class="text-right" style="margin-bottom:1em;">
+    
     {{^user}}
     <a id="login" href="/login" class="btn btn-primary">
     Sign In
@@ -17,12 +18,17 @@
     Register
     </a>
     {{/user}}
+
     {{#user}}
     <a id="logout" href="/logout" class="btn btn-primary">
     Sign Out
     </a>
+    <div class="text-right">
+        <a href="/new" class="btn btn-primary">Write in the guest book</a>
+    </div>
     {{/user}}
     </div>
+    
 
 
 
@@ -50,12 +56,11 @@
         </div>
       </div>
     </div>
-
-    
     <hr>
     {{/goals}}
     {{^goals}}
     No entries yet
     {{/goals}}
+
 </body>
 </html>
