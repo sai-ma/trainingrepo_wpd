@@ -11,7 +11,7 @@ const passport = require('passport');
 const app = express();
 
 
-//use express to create a web application
+
 
 const views = path.join(__dirname, 'views');
 app.use(express.static(views));
@@ -27,7 +27,7 @@ app.use(passport.session());
 
 auth.init(app);
 
-//only one line needed on index to reroute all routes apparently
+
 app.use('/',router);
 
 app.listen(8000, () => 

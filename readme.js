@@ -40,7 +40,11 @@
 // - '/new' attached to Write new goal button that is displays when users are logged in
 
 //FUNCTIONS
-// 
+// add new goal - '/new' URL ( for logged in users only)
+// delete goal - trash icon on '/goals' URL
+// filter goals by AUTHOR - hyperlink of author on each goal
+// registered users can login - '/login' page
+// new users can register - '/register' page
 
 //DATABASES
 // in the exports.landing_page function in trainingControllers.js, db.init has been commented out

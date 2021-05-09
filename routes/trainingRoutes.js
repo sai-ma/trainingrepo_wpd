@@ -26,18 +26,23 @@ router.post('/new', ensureLoggedIn('/login'),  controller.post_new_goal);
 //delete goal route with id passing
 router.get('/delete/:id', controller.delete_goal);
 
+//url that displays register page
 router.get('/register', controller.show_register_page);
 
-
+//post request URL after user submits register details
 router.post('/register', controller.post_new_user);
 
+//displays login page on this url
 router.get('/login', controller.show_login_page);
 
+//authenticates login details on URL before redirecting
 router.post("/login", auth.authorize("/login"),
 controller.post_login);
 
+//to logout currently logged in user
 router.get('/logout', controller.logout);
 
+//for any urls not accounted for
 router.use(controller.not_found);
 
 module.exports = router;

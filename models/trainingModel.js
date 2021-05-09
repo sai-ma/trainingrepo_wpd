@@ -22,7 +22,7 @@ class Training
     }
 
     ////a function to seed the database
-    ////don't really need anymore once CRUD functions are completed?
+    ////don't really need anymore once already seeded
     init() {
         this.db.insert({
             author: 'Bob',
@@ -48,8 +48,7 @@ class Training
 
 
 
-    //get all goals for mygoals page
-
+    //get all goals for goals page
     getAllGoals()
     {
         return new Promise((resolve, reject) => {
@@ -70,7 +69,7 @@ class Training
 
   }
 
-//get goals from clicked user
+//get goals from clicked author
   getGoalsByUser(authorName) {
     return new Promise((resolve, reject) => {
         this.db.find({ 'author': authorName }, function(err, goals) {
@@ -85,7 +84,7 @@ class Training
 }
 
 
-//add goal
+//add goal to database
 addEntry(author, targetArea, trainingGoal, achieved) 
 {
     var goal = {
@@ -108,6 +107,7 @@ addEntry(author, targetArea, trainingGoal, achieved)
 
 }
 
+//delete goal from database
 deleteGoal(id)
 {
     this.db.remove({_id: id}, {}, function(err, rem)
@@ -128,5 +128,5 @@ deleteGoal(id)
 }//end of class
 
 //make module(file) visible outside of this file
-//
+
 module.exports = Training;

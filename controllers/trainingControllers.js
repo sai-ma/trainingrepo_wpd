@@ -64,8 +64,6 @@ exports.new_goal = function(req, res)
 }
 
 
-
-
 ////function for after submitting to add new goal
 exports.post_new_goal = function(req, res) {
   console.log('processing post-new_goal controller');
@@ -103,6 +101,7 @@ exports.show_register_page = function(req,res)
 }
 
 
+//function for after new user submits details on register
 exports.post_new_user = function(req,res)
 {
   const user = req.body.username;
@@ -127,18 +126,20 @@ exports.post_new_user = function(req,res)
 
 };
 
-
+//function to display login page
 exports.show_login_page = function(req,res)
 {
   res.render("user/login");
 };
 
+//function to pass variables to verify registered user's details
 exports.post_login = function(req, res)
 {
   console.log('serializeUser wrote', req.session.passport.user);
   res.redirect('/goals');
 }
 
+//function to logout currently logged in user
 exports.logout = function(req,res)
 {
   req.logout();
